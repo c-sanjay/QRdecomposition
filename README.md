@@ -39,7 +39,7 @@ def QR_Decomposition(A):
         u[: , i] = A[: ,i]
         for j in range(i):
             u[: , i] -= (A[: ,i] @ Q[: , j]) *Q[: , j]
-            Q[:, i] = u[:, i]/ np.linalg.norm(u[:, i])
+        Q[:, i] = u[:, i]/ np.linalg.norm(u[:, i])
     R = np.zeros((n,m))
     for i in range(n):
         for j in range(i,m):
